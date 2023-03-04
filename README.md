@@ -18,8 +18,11 @@
 - picom
 - nnn
 - cmus
+- geoclue-2
 - redshift-gtk
 - mplayer
+- pavucontrol
+
 
 ## Scripts
 - Wallpapers -> Use feh to display a new background every 60s

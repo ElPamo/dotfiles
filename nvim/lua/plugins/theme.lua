@@ -1,3 +1,4 @@
 vim.opt.termguicolors = true
 --Lua:
-vim.cmd 'colorscheme carbonfox'
+vim.opt.background = "dark"
+vim.cmd.colorscheme "oxocarbon" 
