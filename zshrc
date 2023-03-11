@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias config="nvim ~/dev/dotfile/i3config"
+alias config="nvim ~/dev/dotfile/zshrc"
 alias update="sudo apt update && sudo apt upgrade -y"
 
 export NVM_DIR="$HOME/.nvm"
