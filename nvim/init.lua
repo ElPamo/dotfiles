@@ -69,7 +69,6 @@ require('lazy').setup({
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
-  'tpope/vim-surround',
 
   -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
@@ -111,14 +110,6 @@ require('lazy').setup({
         changedelete = { text = '~' },
       },
     },
-  },
-
-  { -- Theme inspired by Atom
-   'nyoom-engineering/oxocarbon.nvim',
-   priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'oxocarbon'
-    end,
   },
 
   { -- Set lualine as statusline
@@ -181,9 +172,7 @@ require('lazy').setup({
   --
   --    An additional note is that if you only copied in the `init.lua`, you can just comment this line
   --    to get rid of the warning telling you that there are not plugins in `lua/custom/plugins/`.
-  { import = 'custom.plugins' },
-  { 'junegunn/goyo.vim'},
-  { 'junegunn/limelight.vim'}
+  { import = 'custom.plugins' }
 }, {})
 
 -- [[ Setting options ]]

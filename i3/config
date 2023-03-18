@@ -180,7 +180,7 @@ assign [class="Steam"]	    $ws4
 
 # -------------
 # Launcher mode
-set $launcher "Launch n(v)im (f)irefox, (d)iscord, (s)team, (n)nn, (m)usic"
+set $launcher "Launch n(v)im (f)irefox, (d)iscord, (s)team, (n)nn, (m)usic, m(o)chi"
 mode $launcher {
     bindsym f exec firefox, mode "default"
     bindsym d exec discord, mode "default"
@@ -188,6 +188,7 @@ mode $launcher {
     bindsym n exec kitty zsh -c nnn, mode "default"
     bindsym m exec kitty zsh -c cmus, mode "default"
     bindsym v exec kitty zsh -c nvim, mode "default"
+    bindsym o exec mochi, mode "default"
 
     bindsym Escape mode "default"
 }
@@ -209,4 +210,4 @@ bindsym $mod+p mode $power
 # Application
 exec picom --experimental-backends 
 exec --no-startup-id wallpapers
-exec resdhift-gtk &
+exec redshift-gtk &
