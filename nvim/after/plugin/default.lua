@@ -10,6 +10,9 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.g.autowrite = true
 
+vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
+vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
+
 vim.api.nvim_create_user_command(
     'Note',
     function()
@@ -37,6 +40,4 @@ vim.api.nvim_create_user_command(
     { nargs = 0 }
 )
 
-require('hologram').setup{
-    auto_display = true -- WIP automatic markdown image display, may be prone to breaking
-}
+require("telescope").load_extension("media_files")

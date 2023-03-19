@@ -17,19 +17,16 @@ return {
 
   -- Motion improvement
   'tpope/vim-surround',
+  
+  -- File handling
+  'nvim-telescope/telescope-media-files.nvim',
 
   -- Note mode
   'junegunn/goyo.vim',
   'junegunn/limelight.vim',
-  'davidgranstrom/nvim-markdown-preview',
   'vim-pandoc/vim-pandoc-syntax',
-  {"ellisonleao/glow.nvim", config = true, cmd = "Glow"},
   {
-    'edluffy/hologram.nvim',
-    config = function ()
-      require('hologram').setup{
-        auto_display = true -- WIP automatic markdown image display, may be prone to breaking
-      }
-    end
+    'toppair/peek.nvim',
+    run = 'deno task --quiet build:fast'
   }
 }
