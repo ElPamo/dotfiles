@@ -45,7 +45,7 @@ bindsym XF86AudioNext exec mpc next
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 1
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -183,15 +183,18 @@ assign [title="ncmpcpp 0.9.2"]	        $ws9
 
 # -------------
 # Launcher mode
-set $launcher "Launch n(v)im (f)irefox, (d)iscord, (s)team, (n)nn, (m)usic, m(o)chi"
+set $launcher "Launch n(v)im, no(t)e, (f)irefox, (d)iscord, (s)team, (n)nn, (m)usic, m(o)chi, (c)onfig"
 mode $launcher {
     bindsym f exec firefox, mode "default"
     bindsym d exec discord, mode "default"
     bindsym s exec steam, mode "default"
     bindsym n exec kitty zsh -c nnn, mode "default"
-    bindsym m exec kitty zsh -c cmus, mode "default"
+    bindsym m exec kitty zsh -c ncmcpp, mode "default"
     bindsym v exec kitty zsh -c nvim, mode "default"
-    bindsym o exec kitty zsh -c mochi, mode "default"
+    bindsym c exec kitty zsh -c nvim $DOTFILE, mode "default"
+    bindsym t exec kitty zsh -c nvim $NOTE, mode "default"
+    bindsym a exec ~/Documents/soft/android-studio/bin/studio.sh, mode "default"
+    bindsym o exec Mochi-1.15.20.AppImage, mode "default"
 
     bindsym Escape mode "default"
 }
@@ -199,10 +202,11 @@ bindsym $mod+d mode $launcher
 
 # ------------
 # Power mode
-set $power "Bye ! (s)hutdown, (h)ibernate, (l)ock"
+set $power "Bye ! (s)hutdown, (h)ibernate, (r)eboot, (l)ock"
 mode $power {
     bindsym s exec shutdown now, mode "default"
     bindsym h exec systemctl suspend, mode "default"
+    bindsym r exec reboot, mode "default"
     bindsym l exec i3lock, mode "default"
 
     bindsym Escape mode "default"
@@ -210,9 +214,16 @@ mode $power {
 bindsym $mod+p mode $power
 
 # ------------
-# Application
-exec picom --experimental-backends --blur-background-fixed --glx-no-stencil
-exec --no-startup-id wallpapers
+# Screen settings
+exec .local/screenlayout.sh
 
+# ------------
+# Environment
+exec picom 
+exec --no-startup-id wallpapers
+exec --no-startup-id dunst
+
+# ------------
+# Applications
 exec redshift-gtk &
 exec mpd &

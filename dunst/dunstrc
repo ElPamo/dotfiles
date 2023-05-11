@@ -3,18 +3,18 @@
 [global]
 	monitor = 0
 	follow = mouse
-	geometry = "300x60-20+48"
+	geometry = "384-0+32"
 	indicate_hidden = yes
-	shrink = no
-	separator_height = 0
+	shrink = yes
+	gap_size = 16
 	padding = 16
 	horizontal_padding = 16
 	sort = no
 	idle_threshold = 120
 	font = "IBM Plex Text" 12
-	line_height = 4
+	line_height = 6
 	markup = full
-	format = %s\n%b
+	format = <i>%s</i>\n\n%b
 	alignment = left
 	show_age_threshold = 60
 	word_wrap = yes
@@ -22,13 +22,15 @@
 	stack_duplicates = false
 	hide_duplicate_count = yes
 	show_indicators = no
-	icon_position = off
+	icon_position = on
 	sticky_history = yes
 	history_length = 20
 	browser = /usr/bin/firefox -new-tab
 	always_run_script = true
+	text_icon_padding = 8
 	title = Dunst
 	class = Dunst
+	max_icon_size = 32
 
 [shortcuts]
 	close = ctrl+space

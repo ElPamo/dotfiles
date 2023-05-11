@@ -1,0 +1,37 @@
+general {
+  colors = true
+  color_good = "#0f62fe"
+  color_bad = "#da1e28"
+  interval = 5
+  separator = " - "
+}
+
+order += "wireless wlp6s0"
+order += "ethernet enp5s0"
+order += "memory"
+order += "cpu_usage"
+order += "disk /"
+order += "tztime local"
+
+memory {
+        format = "%used"
+        threshold_degraded = "10%"
+        format_degraded = "⚠ %free"
+}
+
+tztime local {
+        format = " 📅 %d-%m-%Y / 🕐 %H:%M:%S"
+}
+
+disk "/" {
+        format = " 🖴 %free"
+}
+
+wireless wlp6s0 {
+        format_up = "  %essid: %quality - %bitrate / %ip"
+        format_down = " down"
+}
+
+cpu_usage {
+    format = " ⏲ %usage"
+}

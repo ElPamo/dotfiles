@@ -3,7 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-export PATH=$PATH:$HOME/.local/bin:$HOME/.local/app
 
 # Node version manager
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -109,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias config="cd /home/tertullien/dev/dotfile && nvim ~/dev/dotfile/zshrc"
+alias config="cd $DOTFILE && nvim $DOTFILE/zshrc"
 alias update="sudo apt update && sudo apt upgrade -y"
 
 export NVM_DIR="$HOME/.nvm"

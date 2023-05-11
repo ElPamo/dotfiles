@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Le sujet du jour: \n"
+cat $1 | uniq | shuf | tail -n 1
